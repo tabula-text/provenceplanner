@@ -1,3 +1,5 @@
+import { DinnersList } from "@/components/DinnersList";
+
 export default function DinnersPage() {
   return (
     <div className="space-y-6">
@@ -8,11 +10,7 @@ export default function DinnersPage() {
         </p>
       </div>
 
-      <div className="rounded-lg border border-gray-200 bg-white p-8 text-center dark:border-gray-800 dark:bg-gray-900">
-        <p className="text-gray-600 dark:text-gray-400">
-          Dinner list coming in Phase 4...
-        </p>
-      </div>
+      <DinnersList />
     </div>
   );
 }
