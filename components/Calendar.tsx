@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getCalendarEvents } from "@/lib/db";
+import { getCalendarEvents, createCalendarEvent } from "@/lib/db";
 import { TRIP_START, TRIP_END, VILLA_START, VILLA_END } from "@/lib/constants";
 import { CalendarItem } from "@/lib/types";
 
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function getChipClass(type: string): string {
   const map: Record<string, string> = {
@@ -18,9 +19,9 @@ function getChipClass(type: string): string {
   return map[type] ?? "chip-event";
 }
 
-// 6-week grid: Mon Mar 16 → Sun Apr 26 (March 16 is already a Monday)
-const gridStart = new Date(2026, 2, 16);
-const GRID_CELLS = Array.from({ length: 42 }, (_, i) => {
+// 3-week grid: Mon Mar 23 → Sun Apr 12 (Mar 23 is a Monday)
+const gridStart = new Date(2026, 2, 23);
+const GRID_CELLS = Array.from({ length: 21 }, (_, i) => {
   const d = new Date(gridStart);
   d.setDate(gridStart.getDate() + i);
   return d;
@@ -46,6 +47,8 @@ export function Calendar() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [quickAddTitle, setQuickAddTitle] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     async function loadEvents() {
@@ -95,7 +98,7 @@ export function Calendar() {
       {/* Month header */}
       <div className="flex items-end justify-between">
         <h2 className="page-title">March–April 2026</h2>
-        <p className="section-label">March 16th – April 20th · Southern France</p>
+        <p className="section-label">March 23rd – April 12th · Southern France</p>
       </div>
 
       {/* Chip legend */}
@@ -133,6 +136,7 @@ export function Calendar() {
           const dayEvents = getDayEvents(dateStr);
           const isSelected = selectedDate === dateStr;
           const dayNum = cellDate.getDate();
+          const monthStr = MONTHS[cellDate.getMonth()];
 
           // Cell background
           const cellBg = inMonth
@@ -142,7 +146,7 @@ export function Calendar() {
           return (
             <div
               key={dateStr}
-              className="min-h-[100px] p-2 flex flex-col gap-1"
+              className="min-h-[160px] p-2 flex flex-col gap-1"
               style={{
                 backgroundColor: cellBg,
                 boxShadow: inTrip
@@ -150,34 +154,52 @@ export function Calendar() {
                   : undefined,
               }}
             >
-              {/* Day number */}
+              {/* Day number + month */}
               <div className="flex items-start justify-between">
-                <span
-                  className="flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold"
-                  style={
-                    inTrip
-                      ? {
-                          backgroundColor: "var(--color-terracotta)",
-                          color: "var(--color-cream-100)",
-                        }
-                      : {
-                          color: inMonth
-                            ? "var(--color-cream-300)"
-                            : "var(--color-cream-500)",
-                        }
-                  }
-                >
-                  {dayNum}
-                </span>
+                <div className="flex flex-col items-center gap-0.5">
+                  <span
+                    className="text-[9px] uppercase tracking-wider leading-none"
+                    style={{
+                      color: inTrip
+                        ? "var(--color-terracotta)"
+                        : "var(--color-cream-500)",
+                    }}
+                  >
+                    {monthStr}
+                  </span>
+                  <span
+                    className="flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold"
+                    style={
+                      inTrip
+                        ? {
+                            backgroundColor: "var(--color-terracotta)",
+                            color: "var(--color-cream-100)",
+                          }
+                        : {
+                            color: inMonth
+                              ? "var(--color-cream-300)"
+                              : "var(--color-cream-500)",
+                          }
+                    }
+                  >
+                    {dayNum}
+                  </span>
+                </div>
 
                 {inTrip && (
                   <button
-                    onClick={() =>
-                      setSelectedDate(isSelected ? null : dateStr)
-                    }
+                    onClick={() => {
+                      if (isSelected) {
+                        setSelectedDate(null);
+                        setQuickAddTitle("");
+                      } else {
+                        setSelectedDate(dateStr);
+                        setQuickAddTitle("");
+                      }
+                    }}
                     className="text-xs transition-colors"
                     style={{ color: "var(--color-cream-500)" }}
-                    title="Quick add"
+                    title="Quick add event"
                   >
                     {isSelected ? "✕" : "+"}
                   </button>
@@ -202,15 +224,65 @@ export function Calendar() {
 
               {/* Quick add panel */}
               {isSelected && inTrip && (
-                <div
-                  className="mt-1 rounded px-2 py-1 text-xs"
-                  style={{
-                    borderTop: "1px solid var(--color-stone-700)",
-                    color: "var(--color-cream-500)",
+                <form
+                  className="mt-auto pt-1 flex flex-col gap-1"
+                  style={{ borderTop: "1px solid var(--color-stone-700)" }}
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const title = quickAddTitle.trim();
+                    if (!title || !selectedDate) return;
+                    setIsSaving(true);
+                    try {
+                      const created = await createCalendarEvent({
+                        date: selectedDate,
+                        title,
+                        notes: null,
+                      });
+                      setEvents((prev) => [
+                        ...prev,
+                        {
+                          id: created.id,
+                          date: created.date,
+                          title: `📌 ${created.title}`,
+                          type: "event",
+                          color: "bg-purple-500",
+                          data: created,
+                        },
+                      ]);
+                      setSelectedDate(null);
+                      setQuickAddTitle("");
+                    } catch {
+                      // leave panel open on error
+                    } finally {
+                      setIsSaving(false);
+                    }
                   }}
                 >
-                  Quick add — coming soon
-                </div>
+                  <input
+                    autoFocus
+                    type="text"
+                    placeholder="Event title…"
+                    value={quickAddTitle}
+                    onChange={(e) => setQuickAddTitle(e.target.value)}
+                    className="w-full rounded px-1.5 py-0.5 text-xs outline-none"
+                    style={{
+                      backgroundColor: "var(--color-stone-800)",
+                      color: "var(--color-cream-200)",
+                      border: "1px solid var(--color-stone-600)",
+                    }}
+                  />
+                  <button
+                    type="submit"
+                    disabled={!quickAddTitle.trim() || isSaving}
+                    className="rounded px-2 py-0.5 text-xs font-medium transition-opacity disabled:opacity-40"
+                    style={{
+                      backgroundColor: "var(--color-terracotta)",
+                      color: "var(--color-cream-100)",
+                    }}
+                  >
+                    {isSaving ? "Saving…" : "Add"}
+                  </button>
+                </form>
               )}
             </div>
           );
