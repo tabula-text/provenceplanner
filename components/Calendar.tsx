@@ -24,7 +24,7 @@ const dayOfWeek = (firstOfMay.getDay() + 6) % 7; // Mon=0
 const gridStart = new Date(firstOfMay);
 gridStart.setDate(firstOfMay.getDate() - dayOfWeek); // Apr 29
 const GRID_CELLS = Array.from({ length: 35 }, (_, i) => {
-  const d = new Date(gridStart);
+  const d = new Date(gridStart);:
   d.setDate(gridStart.getDate() + i);
   return d;
 });
@@ -97,8 +97,8 @@ export function Calendar() {
     <div className="space-y-6">
       {/* Month header */}
       <div className="flex items-end justify-between">
-        <h2 className="page-title">May 2024</h2>
-        <p className="section-label">15–22 May · Southern France</p>
+        <h2 className="page-title">March-April 2026</h2>
+        <p className="section-label">March 20th - April 8th · Southern France</p>
       </div>
 
       {/* Chip legend */}
