@@ -4,6 +4,12 @@ import { useState, useEffect } from "react";
 import { Place } from "@/lib/types";
 import { getPlaces, deletePlace, createPlace } from "@/lib/db";
 
+const PRIORITY_STYLES: Record<string, { bg: string; color: string; label: string }> = {
+  high: { bg: "rgba(196, 98, 45, 0.15)", color: "var(--color-terracotta)", label: "High" },
+  medium: { bg: "rgba(212, 148, 58, 0.15)", color: "var(--color-saffron)", label: "Medium" },
+  low: { bg: "rgba(61, 48, 32, 0.8)", color: "var(--color-cream-500)", label: "Low" },
+};
+
 export function PlacesList() {
   const [places, setPlaces] = useState<Place[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -49,42 +55,66 @@ export function PlacesList() {
     }
   }
 
-  if (isLoading) return <p className="text-gray-600 dark:text-gray-400">Loading...</p>;
+  if (isLoading) return <p style={{ color: "var(--color-cream-300)" }}>Loading...</p>;
 
   return (
     <div className="space-y-6">
-      <button onClick={() => setShowForm(!showForm)} className="btn">{showForm ? "Cancel" : "Add Place"}</button>
+      <button onClick={() => setShowForm(!showForm)} className="btn">
+        {showForm ? "Cancel" : "Add Place"}
+      </button>
 
       {showForm && (
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
-          <input type="text" placeholder="Place Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800" />
-          <input type="text" placeholder="Location" value={formData.location} onChange={(e) => setFormData({ ...formData, location: e.target.value })} className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800" />
-          <textarea placeholder="Description" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800" />
-          <select value={formData.priority} onChange={(e) => setFormData({ ...formData, priority: e.target.value as any })} className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800">
+        <form onSubmit={handleSubmit} className="card space-y-4">
+          <input type="text" placeholder="Place Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="form-input" />
+          <input type="text" placeholder="Location" value={formData.location} onChange={(e) => setFormData({ ...formData, location: e.target.value })} className="form-input" />
+          <textarea placeholder="Description" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} className="form-input" />
+          <select value={formData.priority} onChange={(e) => setFormData({ ...formData, priority: e.target.value as any })} className="form-input">
             <option value="low">Low Priority</option>
             <option value="medium">Medium Priority</option>
             <option value="high">High Priority</option>
           </select>
-          <input type="url" placeholder="Website" value={formData.url} onChange={(e) => setFormData({ ...formData, url: e.target.value })} className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800" />
+          <input type="url" placeholder="Website" value={formData.url} onChange={(e) => setFormData({ ...formData, url: e.target.value })} className="form-input" />
           <button type="submit" className="btn">Save Place</button>
         </form>
       )}
 
       {places.length > 0 ? (
         <div className="space-y-4">
-          {places.map((p) => (
-            <div key={p.id} className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
-              <div className="flex items-start justify-between">
-                <div><h3 className="font-semibold">{p.name} {p.priority === "high" ? "⭐" : ""}</h3><p className="text-sm text-gray-600 dark:text-gray-400">{p.location}</p></div>
-                <button onClick={() => handleDelete(p.id)} className="rounded-md border border-red-300 bg-white px-3 py-2 text-sm font-medium text-red-900 hover:bg-red-50 dark:border-red-600 dark:bg-gray-900 dark:text-red-400">Delete</button>
+          {places.map((p) => {
+            const ps = PRIORITY_STYLES[p.priority ?? "medium"] ?? PRIORITY_STYLES.medium;
+            return (
+              <div key={p.id} className="card">
+                <div className="flex items-start justify-between">
+                  <div className="flex items-start gap-3">
+                    <span
+                      className="mt-0.5 rounded px-2 py-0.5 text-xs font-medium"
+                      style={{ backgroundColor: ps.bg, color: ps.color }}
+                    >
+                      {ps.label}
+                    </span>
+                    <div>
+                      <h3 className="font-semibold" style={{ color: "var(--color-cream-100)" }}>{p.name}</h3>
+                      <p className="text-sm" style={{ color: "var(--color-cream-300)" }}>{p.location}</p>
+                    </div>
+                  </div>
+                  <button onClick={() => handleDelete(p.id)} className="btn-danger">Delete</button>
+                </div>
+                {p.description && <p className="mt-2 text-sm" style={{ color: "var(--color-cream-300)" }}>{p.description}</p>}
+                {p.url && (
+                  <p className="mt-1 text-sm">
+                    <a href={p.url} target="_blank" rel="noopener" style={{ color: "var(--color-saffron)" }} className="hover:underline">
+                      Learn more
+                    </a>
+                  </p>
+                )}
               </div>
-              {p.description && <p className="mt-2 text-sm">{p.description}</p>}
-              {p.url && <p className="mt-1 text-sm"><a href={p.url} target="_blank" rel="noopener" className="text-blue-600 hover:underline dark:text-blue-400">Learn more</a></p>}
-            </div>
-          ))}
+            );
+          })}
         </div>
       ) : (
-        <div className="rounded-lg bg-gray-50 p-8 text-center dark:bg-gray-900"><p className="text-gray-600 dark:text-gray-400">No places yet</p></div>
+        <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "var(--color-stone-800)" }}>
+          <p style={{ color: "var(--color-cream-300)" }}>No places yet</p>
+        </div>
       )}
     </div>
   );

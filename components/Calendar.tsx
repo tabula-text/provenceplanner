@@ -5,6 +5,45 @@ import { getCalendarEvents } from "@/lib/db";
 import { TRIP_START, TRIP_END } from "@/lib/constants";
 import { CalendarItem } from "@/lib/types";
 
+const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+function getChipClass(type: string): string {
+  const map: Record<string, string> = {
+    flight: "chip-flight",
+    train: "chip-train",
+    hotel: "chip-hotel",
+    dinner: "chip-dinner",
+    event: "chip-event",
+  };
+  return map[type] ?? "chip-event";
+}
+
+// Build a 35-cell grid starting Mon Apr 29, ending Sun Jun 2
+const firstOfMay = new Date(2024, 4, 1);
+const dayOfWeek = (firstOfMay.getDay() + 6) % 7; // Mon=0
+const gridStart = new Date(firstOfMay);
+gridStart.setDate(firstOfMay.getDate() - dayOfWeek); // Apr 29
+const GRID_CELLS = Array.from({ length: 35 }, (_, i) => {
+  const d = new Date(gridStart);
+  d.setDate(gridStart.getDate() + i);
+  return d;
+});
+
+const TRIP_START_DATE = new Date(TRIP_START + "T00:00:00");
+const TRIP_END_DATE = new Date(TRIP_END + "T00:00:00");
+
+function isTripDay(d: Date): boolean {
+  return d >= TRIP_START_DATE && d <= TRIP_END_DATE;
+}
+
+function isCurrentMonth(d: Date): boolean {
+  return d.getMonth() === 4; // May
+}
+
+function toDateStr(d: Date): string {
+  return d.toISOString().split("T")[0];
+}
+
 export function Calendar() {
   const [events, setEvents] = useState<CalendarItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,38 +67,27 @@ export function Calendar() {
     loadEvents();
   }, []);
 
-  const startDate = new Date(TRIP_START);
-  const endDate = new Date(TRIP_END);
-  const daysInRange = Math.ceil(
-    (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-  ) + 1;
-
-  const getDayEvents = (date: string) => {
-    return events.filter((event) => event.date === date);
-  };
-
-  const getColorClass = (color: string) => {
-    const colorMap: Record<string, string> = {
-      "bg-blue-500": "bg-blue-100 dark:bg-blue-900",
-      "bg-orange-500": "bg-orange-100 dark:bg-orange-900",
-      "bg-green-500": "bg-green-100 dark:bg-green-900",
-      "bg-red-500": "bg-red-100 dark:bg-red-900",
-      "bg-purple-500": "bg-purple-100 dark:bg-purple-900",
-    };
-    return colorMap[color] || "bg-gray-100 dark:bg-gray-900";
-  };
+  const getDayEvents = (dateStr: string) =>
+    events.filter((event) => event.date === dateStr);
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <p className="text-gray-600 dark:text-gray-400">Loading calendar...</p>
+        <p style={{ color: "var(--color-cream-300)" }}>Loading calendar...</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="rounded-lg bg-red-50 p-4 text-red-700 dark:bg-red-900/20 dark:text-red-400">
+      <div
+        className="rounded-lg p-4"
+        style={{
+          backgroundColor: "rgba(196, 98, 45, 0.1)",
+          color: "var(--color-terracotta)",
+          border: "1px solid var(--color-terracotta-dim)",
+        }}
+      >
         {error}
       </div>
     );
@@ -67,72 +95,124 @@ export function Calendar() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold">
-          {startDate.toLocaleDateString("en-US", {
-            month: "long",
-            year: "numeric",
-          })}{" "}
-          Trip Calendar
-        </h2>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">
-          {TRIP_START} to {TRIP_END} ({daysInRange} days)
-        </p>
+      {/* Month header */}
+      <div className="flex items-end justify-between">
+        <h2 className="page-title">May 2024</h2>
+        <p className="section-label">15–22 May · Southern France</p>
       </div>
 
-      <div className="grid gap-4">
-        {Array.from({ length: daysInRange }).map((_, index) => {
-          const currentDate = new Date(startDate);
-          currentDate.setDate(currentDate.getDate() + index);
-          const dateStr = currentDate.toISOString().split("T")[0];
+      {/* Chip legend */}
+      <div className="flex flex-wrap gap-2">
+        {(["flight", "train", "hotel", "dinner", "event"] as const).map(
+          (type) => (
+            <span key={type} className={getChipClass(type)}>
+              {type.charAt(0).toUpperCase() + type.slice(1)}
+            </span>
+          )
+        )}
+      </div>
+
+      {/* Weekday headers */}
+      <div className="grid grid-cols-7">
+        {WEEKDAYS.map((day) => (
+          <div
+            key={day}
+            className="section-label py-2 text-center text-xs"
+          >
+            {day}
+          </div>
+        ))}
+      </div>
+
+      {/* Calendar grid — gap-px + container bg = hairline borders */}
+      <div
+        className="grid grid-cols-7 gap-px"
+        style={{ backgroundColor: "var(--color-stone-700)" }}
+      >
+        {GRID_CELLS.map((cellDate) => {
+          const dateStr = toDateStr(cellDate);
+          const inTrip = isTripDay(cellDate);
+          const inMonth = isCurrentMonth(cellDate);
           const dayEvents = getDayEvents(dateStr);
-          const dayName = currentDate.toLocaleDateString("en-US", {
-            weekday: "short",
-          });
-          const dayNum = currentDate.getDate();
+          const isSelected = selectedDate === dateStr;
+          const dayNum = cellDate.getDate();
+
+          // Cell background
+          const cellBg = inMonth
+            ? "var(--color-cream-900)"
+            : "var(--color-stone-900)";
 
           return (
             <div
               key={dateStr}
-              className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
+              className="min-h-[100px] p-2 flex flex-col gap-1"
+              style={{
+                backgroundColor: cellBg,
+                boxShadow: inTrip
+                  ? "inset 0 0 0 1px rgba(212, 148, 58, 0.30)"
+                  : undefined,
+              }}
             >
-              <div className="mb-3 flex items-center justify-between">
-                <div>
-                  <p className="font-semibold">{dayName}</p>
-                  <p className="text-2xl font-bold">{dayNum}</p>
-                </div>
-                <button
-                  onClick={() => setSelectedDate(selectedDate === dateStr ? null : dateStr)}
-                  className="rounded-md bg-blue-100 px-3 py-1 text-sm font-medium text-blue-900 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-800"
+              {/* Day number */}
+              <div className="flex items-start justify-between">
+                <span
+                  className="flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold"
+                  style={
+                    inTrip
+                      ? {
+                          backgroundColor: "var(--color-terracotta)",
+                          color: "var(--color-cream-100)",
+                        }
+                      : {
+                          color: inMonth
+                            ? "var(--color-cream-300)"
+                            : "var(--color-cream-500)",
+                        }
+                  }
                 >
-                  {selectedDate === dateStr ? "Hide" : "Add"}
-                </button>
+                  {dayNum}
+                </span>
+
+                {inTrip && (
+                  <button
+                    onClick={() =>
+                      setSelectedDate(isSelected ? null : dateStr)
+                    }
+                    className="text-xs transition-colors"
+                    style={{ color: "var(--color-cream-500)" }}
+                    title="Quick add"
+                  >
+                    {isSelected ? "✕" : "+"}
+                  </button>
+                )}
               </div>
 
-              {dayEvents.length > 0 ? (
-                <div className="space-y-2">
-                  {dayEvents.map((event) => (
-                    <div
-                      key={event.id}
-                      className={`rounded-md p-2 text-sm font-medium ${getColorClass(
-                        event.color
-                      )}`}
-                    >
-                      {event.title}
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  No events scheduled
-                </p>
+              {/* Event chips */}
+              {dayEvents.slice(0, 3).map((event) => (
+                <span key={event.id} className={getChipClass(event.type)}>
+                  {event.title}
+                </span>
+              ))}
+
+              {dayEvents.length > 3 && (
+                <span
+                  className="text-xs"
+                  style={{ color: "var(--color-cream-500)" }}
+                >
+                  +{dayEvents.length - 3} more
+                </span>
               )}
 
-              {selectedDate === dateStr && (
-                <div className="mt-4 border-t border-gray-200 pt-4 dark:border-gray-700">
-                  <p className="mb-2 text-xs font-semibold text-gray-600 dark:text-gray-400">
-                    Quick add event (coming in next phase)
-                  </p>
+              {/* Quick add panel */}
+              {isSelected && inTrip && (
+                <div
+                  className="mt-1 rounded px-2 py-1 text-xs"
+                  style={{
+                    borderTop: "1px solid var(--color-stone-700)",
+                    color: "var(--color-cream-500)",
+                  }}
+                >
+                  Quick add — coming soon
                 </div>
               )}
             </div>
@@ -141,8 +221,16 @@ export function Calendar() {
       </div>
 
       {events.length === 0 && (
-        <div className="rounded-lg bg-blue-50 p-4 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100">
-          <p>No events yet. Add flights, trains, hotels, or dinners from their respective pages to see them appear here!</p>
+        <div
+          className="rounded-xl p-4 text-sm"
+          style={{
+            backgroundColor: "var(--color-stone-800)",
+            color: "var(--color-cream-300)",
+            border: "1px solid var(--color-stone-700)",
+          }}
+        >
+          No events yet. Add flights, trains, hotels, or dinners from their
+          respective pages to see them here.
         </div>
       )}
     </div>

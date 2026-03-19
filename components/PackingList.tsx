@@ -56,7 +56,7 @@ export function PackingList() {
     }
   }
 
-  if (isLoading) return <p className="text-gray-600 dark:text-gray-400">Loading...</p>;
+  if (isLoading) return <p style={{ color: "var(--color-cream-300)" }}>Loading...</p>;
 
   const packedCount = items.filter((i) => i.packed).length;
 
@@ -64,22 +64,33 @@ export function PackingList() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm" style={{ color: "var(--color-cream-300)" }}>
             {packedCount} of {items.length} items packed
           </p>
           {items.length > 0 && (
-            <div className="mt-2 h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700">
-              <div className="h-full rounded-full bg-green-500" style={{ width: `${(packedCount / items.length) * 100}%` }} />
+            <div
+              className="mt-2 h-2 w-40 rounded-full overflow-hidden"
+              style={{ backgroundColor: "var(--color-stone-700)" }}
+            >
+              <div
+                className="h-full rounded-full transition-all"
+                style={{
+                  width: `${(packedCount / items.length) * 100}%`,
+                  backgroundColor: "var(--color-terracotta)",
+                }}
+              />
             </div>
           )}
         </div>
-        <button onClick={() => setShowForm(!showForm)} className="btn">{showForm ? "Cancel" : "Add Item"}</button>
+        <button onClick={() => setShowForm(!showForm)} className="btn">
+          {showForm ? "Cancel" : "Add Item"}
+        </button>
       </div>
 
       {showForm && (
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
-          <input type="text" placeholder="Item" value={formData.item} onChange={(e) => setFormData({ ...formData, item: e.target.value })} required className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800" />
-          <select value={formData.category} onChange={(e) => setFormData({ ...formData, category: e.target.value })} className="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800">
+        <form onSubmit={handleSubmit} className="card space-y-4">
+          <input type="text" placeholder="Item" value={formData.item} onChange={(e) => setFormData({ ...formData, item: e.target.value })} required className="form-input" />
+          <select value={formData.category} onChange={(e) => setFormData({ ...formData, category: e.target.value })} className="form-input">
             <option value="clothing">Clothing</option>
             <option value="toiletries">Toiletries</option>
             <option value="documents">Documents</option>
@@ -93,23 +104,52 @@ export function PackingList() {
       {items.length > 0 ? (
         <div className="space-y-2">
           {items.map((item) => (
-            <div key={item.id} className={`flex items-center gap-3 rounded-lg p-3 ${item.packed ? "bg-gray-100 dark:bg-gray-800" : "bg-white dark:bg-gray-900"} border border-gray-200 dark:border-gray-800`}>
+            <div
+              key={item.id}
+              className="flex items-center gap-3 rounded-lg p-3"
+              style={{
+                backgroundColor: item.packed
+                  ? "var(--color-stone-800)"
+                  : "var(--color-cream-900)",
+                border: "1px solid var(--color-stone-700)",
+              }}
+            >
               <input
                 type="checkbox"
                 checked={item.packed}
                 onChange={() => handleToggle(item.id, item.packed)}
-                className="rounded border-gray-300"
+                className="rounded"
+                style={{ accentColor: "var(--color-terracotta)" }}
               />
               <div className="flex-1">
-                <p className={item.packed ? "line-through text-gray-500 dark:text-gray-400" : ""}>{item.item}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{item.category}</p>
+                <p
+                  className={item.packed ? "line-through" : ""}
+                  style={{
+                    color: item.packed
+                      ? "var(--color-cream-500)"
+                      : "var(--color-cream-100)",
+                  }}
+                >
+                  {item.item}
+                </p>
+                <p className="text-xs" style={{ color: "var(--color-cream-500)" }}>
+                  {item.category}
+                </p>
               </div>
-              <button onClick={() => handleDelete(item.id)} className="text-xs text-red-600 hover:text-red-700 dark:text-red-400">Delete</button>
+              <button
+                onClick={() => handleDelete(item.id)}
+                className="text-xs transition-colors"
+                style={{ color: "var(--color-terracotta)" }}
+              >
+                Delete
+              </button>
             </div>
           ))}
         </div>
       ) : (
-        <div className="rounded-lg bg-gray-50 p-8 text-center dark:bg-gray-900"><p className="text-gray-600 dark:text-gray-400">No items to pack yet</p></div>
+        <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "var(--color-stone-800)" }}>
+          <p style={{ color: "var(--color-cream-300)" }}>No items to pack yet</p>
+        </div>
       )}
     </div>
   );
