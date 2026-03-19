@@ -1,6 +1,10 @@
-// Trip dates
+// Trip dates — full window (arrivals through departures)
 export const TRIP_START = "2026-03-16";
 export const TRIP_END = "2026-04-20";
+
+// Villa dates — family convenes near St. Rémy-en-Provence
+export const VILLA_START = "2026-03-28";
+export const VILLA_END = "2026-04-04";
 
 // Trip password (from env, but with a fallback for development)
 export const TRIP_PASSWORD = process.env.NEXT_PUBLIC_TRIP_PASSWORD || "provence2024";

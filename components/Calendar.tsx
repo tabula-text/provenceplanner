@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { getCalendarEvents } from "@/lib/db";
-import { TRIP_START, TRIP_END } from "@/lib/constants";
+import { TRIP_START, TRIP_END, VILLA_START, VILLA_END } from "@/lib/constants";
 import { CalendarItem } from "@/lib/types";
 
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -26,11 +26,11 @@ const GRID_CELLS = Array.from({ length: 42 }, (_, i) => {
   return d;
 });
 
-const TRIP_START_DATE = new Date(TRIP_START + "T00:00:00");
-const TRIP_END_DATE = new Date(TRIP_END + "T00:00:00");
+const VILLA_START_DATE = new Date(VILLA_START + "T00:00:00");
+const VILLA_END_DATE = new Date(VILLA_END + "T00:00:00");
 
 function isTripDay(d: Date): boolean {
-  return d >= TRIP_START_DATE && d <= TRIP_END_DATE;
+  return d >= VILLA_START_DATE && d <= VILLA_END_DATE;
 }
 
 function isCurrentMonth(d: Date): boolean {
