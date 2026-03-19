@@ -19,7 +19,7 @@ function getChipClass(type: string): string {
 }
 
 // Build a 35-cell grid starting Mon Apr 29, ending Sun Jun 2
-const firstOfMay = new Date(2024, 4, 1);
+const firstOfMay = new Date(2026, 3, 15);
 const dayOfWeek = (firstOfMay.getDay() + 6) % 7; // Mon=0
 const gridStart = new Date(firstOfMay);
 gridStart.setDate(firstOfMay.getDate() - dayOfWeek); // Apr 29
