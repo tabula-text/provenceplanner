@@ -18,13 +18,10 @@ function getChipClass(type: string): string {
   return map[type] ?? "chip-event";
 }
 
-// Build a 35-cell grid starting Mon Apr 29, ending Sun Jun 2
-const firstOfMay = new Date(2026, 3, 15);
-const dayOfWeek = (firstOfMay.getDay() + 6) % 7; // Mon=0
-const gridStart = new Date(firstOfMay);
-gridStart.setDate(firstOfMay.getDate() - dayOfWeek); // Apr 29
-const GRID_CELLS = Array.from({ length: 35 }, (_, i) => {
-  const d = new Date(gridStart);:
+// 6-week grid: Mon Mar 16 → Sun Apr 26 (March 16 is already a Monday)
+const gridStart = new Date(2026, 2, 16);
+const GRID_CELLS = Array.from({ length: 42 }, (_, i) => {
+  const d = new Date(gridStart);
   d.setDate(gridStart.getDate() + i);
   return d;
 });
@@ -37,7 +34,7 @@ function isTripDay(d: Date): boolean {
 }
 
 function isCurrentMonth(d: Date): boolean {
-  return d.getMonth() === 4; // May
+  return d.getMonth() === 2 || d.getMonth() === 3; // March or April
 }
 
 function toDateStr(d: Date): string {
@@ -97,8 +94,8 @@ export function Calendar() {
     <div className="space-y-6">
       {/* Month header */}
       <div className="flex items-end justify-between">
-        <h2 className="page-title">March-April 2026</h2>
-        <p className="section-label">March 20th - April 8th · Southern France</p>
+        <h2 className="page-title">March–April 2026</h2>
+        <p className="section-label">March 16th – April 20th · Southern France</p>
       </div>
 
       {/* Chip legend */}

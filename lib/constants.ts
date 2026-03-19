@@ -1,6 +1,6 @@
 // Trip dates
-export const TRIP_START = "2024-05-15";
-export const TRIP_END = "2024-05-22";
+export const TRIP_START = "2026-03-16";
+export const TRIP_END = "2026-04-20";
 
 // Trip password (from env, but with a fallback for development)
 export const TRIP_PASSWORD = process.env.NEXT_PUBLIC_TRIP_PASSWORD || "provence2024";
