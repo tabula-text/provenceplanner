@@ -1,0 +1,14 @@
+[
+  { "name": "Les Baux-de-Provence", "description": "Dramatic hilltop village, 20 min from house", "location": "Les Baux-de-Provence", "url": null },
+  { "name": "Carrières de Lumières", "description": "Giant digital art projections in limestone quarry", "location": "Les Baux-de-Provence", "url": "https://www.carrieres-lumieres.com/en" },
+  { "name": "Eygalières", "description": "Charming village, Friday morning market", "location": "Eygalières", "url": null },
+  { "name": "Saint Paul de Mausole", "description": "Where Van Gogh lived, Roman site", "location": "Saint-Rémy-de-Provence", "url": null },
+  { "name": "Palais des Papes, Avignon", "description": "Pope's palace", "location": "Avignon", "url": "https://palais-des-papes.com/" },
+  { "name": "Luberon villages", "description": "Gordes, Bonnieux, ochre cliffs of Roussillon", "location": "Luberon", "url": null },
+  { "name": "L'Isle-sur-la-Sorgue", "description": "Flea market town; International Antiques Fair Apr 2–5", "location": "L'Isle-sur-la-Sorgue", "url": null },
+  { "name": "Arles", "description": "Roman arena and theatre; Easter Feria opens Apr 3", "location": "Arles", "url": null },
+  { "name": "Camargue / Saintes-Maries-de-la-Mer", "description": "Sea day option", "location": "Camargue", "url": null },
+  { "name": "Cassis", "description": "Coastal town near Marseille — sea day option", "location": "Cassis", "url": null },
+  { "name": "Aix-en-Provence", "description": "Beautiful city, museums, shopping — 1 hr drive", "location": "Aix-en-Provence", "url": null },
+  { "name": "Domaine de la Vallongue", "description": "Vineyard to visit", "location": "Saint-Rémy-de-Provence", "url": "https://g.co/kgs/fQjaLJP" }
+]

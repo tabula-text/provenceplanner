@@ -1,0 +1,30 @@
+[
+  {
+    "airline": null,
+    "route": "Reykjavík → Paris CDG",
+    "departure_at": "2026-03-28",
+    "arrival_at": null,
+    "confirmation_ref": null
+  },
+  {
+    "airline": null,
+    "route": "Paris CDG → Reykjavík",
+    "departure_at": "2026-04-07",
+    "arrival_at": null,
+    "confirmation_ref": null
+  },
+  {
+    "airline": "Delta Air Lines",
+    "route": "New York JFK → Paris CDG",
+    "departure_at": "2026-03-31",
+    "arrival_at": "2026-03-31T05:55",
+    "confirmation_ref": "DL8740"
+  },
+  {
+    "airline": "Delta Air Lines",
+    "route": "Paris CDG → New York JFK",
+    "departure_at": "2026-04-08T18:30",
+    "arrival_at": null,
+    "confirmation_ref": "DL8744"
+  }
+]

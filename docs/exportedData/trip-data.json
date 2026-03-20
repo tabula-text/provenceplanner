@@ -1,0 +1,798 @@
+{
+  "meta": {
+    "title": "Páskaferðin 2026",
+    "subtitle": "60 ára afmæli — Frakkland, vor 2026",
+    "dates": "26. mars – 8. apríl 2026",
+    "groupSize": 14,
+    "guestBreakdown": "10 fullorðnir, 3 börn, 1 ungbarn",
+    "locations": ["Saint-Rémy-de-Provence", "Paris", "Avignon"],
+    "lastUpdated": "2026-03-20"
+  },
+
+  "people": [
+    {
+      "name": "Hallbjörn Karlsson",
+      "born": "18.03.1966",
+      "kennitala": "180366-4909",
+      "phone": "+354 864 7600",
+      "email": "hallbjorn@vogabakki.is",
+      "passportName": "FRIDRIK HALLBJOERN KARLSSON",
+      "tripDates": { "from": "2026-03-26", "to": "2026-04-07" },
+      "group": "Hallbjörn & Þorbjörg",
+      "role": "Organiser"
+    },
+    {
+      "name": "Þorbjörg Helga Vigfúsdóttir",
+      "born": "05.09.1972",
+      "kennitala": "050972-4290",
+      "phone": "+354 692 2629",
+      "email": "thv@karaconnect.com",
+      "passportName": "THORBJOERG HELGA VIGFUSDOTTIR",
+      "tripDates": { "from": "2026-03-26", "to": "2026-04-07" },
+      "group": "Hallbjörn & Þorbjörg"
+    },
+    {
+      "name": "Ólöf Stefanía Hallbjörnsdóttir",
+      "born": "01.10.2009",
+      "kennitala": "011009-2550",
+      "phone": "+354 864 0380",
+      "email": "olof@vattarnes.is",
+      "passportName": "OLOEF STEFANIA HALLBJOERNSDOTTIR",
+      "tripDates": { "from": "2026-03-28", "to": "2026-04-07" },
+      "group": "Börn"
+    },
+    {
+      "name": "Embla Margrét Hallbjörnsdóttir",
+      "born": "16.02.2012",
+      "kennitala": "160212-3730",
+      "phone": "+354 864 0379",
+      "email": "embla@vattarnes.is",
+      "passportName": "EMBLA MARGRET HALLBJOERNSDOTTIR",
+      "tripDates": { "from": "2026-03-28", "to": "2026-04-07" },
+      "group": "Börn"
+    },
+    {
+      "name": "Atli Freyr Hallbjörnsson",
+      "born": "19.02.2000",
+      "kennitala": "190200-2990",
+      "phone": "+354 823 6265",
+      "email": "atli@vattarnes.is",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-28", "to": "2026-04-07" },
+      "group": "Atli & Agnes"
+    },
+    {
+      "name": "Agnes Marí Gunnarsdóttir",
+      "born": "28.12.2002",
+      "kennitala": "281202-2190",
+      "phone": "+354 859 3355",
+      "email": "agnes.mari.gunnarsdottir@gmail.com",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-28", "to": "2026-04-07" },
+      "group": "Atli & Agnes"
+    },
+    {
+      "name": "Karl Ólafur Hallbjörnsson",
+      "born": "09.10.1995",
+      "kennitala": "091095-2389",
+      "phone": "+354 821 3491",
+      "email": "hallbjornsson@gmail.com",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-27", "to": "2026-04-07" },
+      "group": "Kalli & Védís"
+    },
+    {
+      "name": "Védís Eva Guðmundsdóttir",
+      "born": null,
+      "kennitala": null,
+      "phone": null,
+      "email": "vedislitla@gmail.com",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-27", "to": "2026-04-07" },
+      "group": "Kalli & Védís"
+    },
+    {
+      "name": "Áróra",
+      "born": null,
+      "kennitala": null,
+      "phone": null,
+      "email": null,
+      "passportName": null,
+      "tripDates": { "from": "2026-03-27", "to": "2026-04-07" },
+      "group": "Kalli & Védís",
+      "note": "Barn"
+    },
+    {
+      "name": "Hallbjörn Helgi",
+      "born": null,
+      "kennitala": null,
+      "phone": null,
+      "email": null,
+      "passportName": null,
+      "tripDates": { "from": "2026-03-27", "to": "2026-04-07" },
+      "group": "Kalli & Védís",
+      "note": "Ungbarn"
+    },
+    {
+      "name": "Hjalti Karlsson",
+      "born": null,
+      "kennitala": null,
+      "phone": null,
+      "email": "hjalti@karlssonwilker.com",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-31", "to": "2026-04-08" },
+      "group": "Hjalti & Vera"
+    },
+    {
+      "name": "Vera",
+      "born": null,
+      "kennitala": null,
+      "phone": null,
+      "email": null,
+      "passportName": null,
+      "tripDates": { "from": "2026-03-31", "to": "2026-04-08" },
+      "group": "Hjalti & Vera"
+    },
+    {
+      "name": "Ólöf Guðríður Björnsdóttir",
+      "born": "29.04.1950",
+      "kennitala": "290450-4899",
+      "phone": "+354 690 8335",
+      "email": "olof.g.bjornsdottir@gmail.com",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-28", "to": "2026-04-07" },
+      "group": "Ólöf G. & Magnús"
+    },
+    {
+      "name": "Magnús Jón Árnason",
+      "born": "11.12.1950",
+      "kennitala": "111250-3919",
+      "phone": "+354 698 5454",
+      "email": "4t4t@simnet.is",
+      "passportName": null,
+      "tripDates": { "from": "2026-03-28", "to": "2026-04-07" },
+      "group": "Ólöf G. & Magnús"
+    }
+  ],
+
+  "accommodation": [
+    {
+      "id": "acc-joubarbes",
+      "name": "Mas des Joubarbes",
+      "type": "house",
+      "address": "1780 Petite Route des Jardins, 13210 Saint-Rémy-de-Provence",
+      "mapUrl": "https://maps.app.goo.gl/2gkhpXuc27nNvJC9A",
+      "dates": { "from": "2026-03-27", "to": "2026-04-07" },
+      "guests": "Allir 14 (Kalli & fjölskylda frá 27. mars, aðrir frá 28. mars)",
+      "checkIn": "16:00",
+      "checkOut": "11:00",
+      "status": "confirmed",
+      "notes": {
+        "securityDeposit": "€10,000 credit card hold on arrival",
+        "cleaning": "Daily morning cleaning included, 9:00 AM",
+        "pool": "Open and clean, but unheated — cold water",
+        "electricCarCharging": "Charging socket confirmed in parking area",
+        "tennis": "Tennis court on site. Rackets and balls available at the house.",
+        "equipment": "High chair / baby bed — needs confirmation"
+      }
+    },
+    {
+      "id": "acc-maison",
+      "name": "La Maison du Village",
+      "type": "hotel",
+      "address": "10 Rue du 8 Mai 1945, 13210 Saint-Rémy-de-Provence",
+      "mapUrl": "https://maps.google.com/?q=10+Rue+Du+Huit+Mai+1945,+13210+Saint-Rémy-de-Provence,+France",
+      "dates": { "from": "2026-03-26", "to": "2026-03-28" },
+      "nights": 2,
+      "room": "Suite Ivoire Prestige",
+      "guests": "Hallbjörn & Þorbjörg",
+      "bookingRef": "P2603092953",
+      "checkIn": "15:00",
+      "checkOut": "11:00",
+      "status": "confirmed",
+      "notes": {
+        "breakfast": "Included"
+      }
+    },
+    {
+      "id": "acc-fontaines",
+      "name": "Fontaines du Luxembourg",
+      "type": "hotel",
+      "address": "Fontaines du Luxembourg, Paris",
+      "dates": { "from": "2026-04-04", "to": "2026-04-07" },
+      "guests": "Atli & Agnes, Ólöf G. & Magnús",
+      "status": "confirmed"
+    }
+  ],
+
+  "transport": {
+    "flights": [
+      {
+        "id": "fl-main-out",
+        "label": "Flug aðalhóps — RKV/KEF → CDG",
+        "date": "2026-03-28",
+        "from": "Reykjavík",
+        "to": "Paris CDG",
+        "passengers": "Atli, Agnes, Kalli, Védís, Áróra, Hallbjörn Helgi, Hjalti S., Kristján Ó., Ólöf G., Magnús, Embla",
+        "flightNumber": null,
+        "airline": null,
+        "departure": null,
+        "arrival": null,
+        "status": "missing",
+        "missing": "Flugnúmer, flugfélag, tímar"
+      },
+      {
+        "id": "fl-main-return",
+        "label": "Flug aðalhóps — CDG → RKV/KEF",
+        "date": "2026-04-07",
+        "from": "Paris CDG",
+        "to": "Reykjavík",
+        "passengers": "Flestir í hópnum (nema Hjalti & Vera)",
+        "flightNumber": null,
+        "airline": null,
+        "departure": null,
+        "arrival": null,
+        "status": "missing",
+        "missing": "Flugnúmer, flugfélag, tímar"
+      },
+      {
+        "id": "fl-hv-in",
+        "label": "DL8740 — JFK → CDG",
+        "date": "2026-03-31",
+        "from": "New York JFK",
+        "to": "Paris CDG",
+        "passengers": "Hjalti & Vera",
+        "flightNumber": "DL8740",
+        "airline": "Delta Air Lines",
+        "departure": null,
+        "arrival": "05:55",
+        "status": "confirmed"
+      },
+      {
+        "id": "fl-hv-out",
+        "label": "DL8744 — CDG → JFK",
+        "date": "2026-04-08",
+        "from": "Paris CDG",
+        "to": "New York JFK",
+        "passengers": "Hjalti & Vera",
+        "flightNumber": "DL8744",
+        "airline": "Delta Air Lines",
+        "departure": "18:30",
+        "arrival": null,
+        "status": "confirmed"
+      }
+    ],
+    "trains": [
+      {
+        "id": "tr-4s24zm",
+        "label": "Lest 4S24ZM — CDG → Avignon",
+        "date": "2026-03-26",
+        "from": "Paris Roissy-CDG 2",
+        "to": "Avignon TGV",
+        "passengers": "Hallbjörn & Þorbjörg",
+        "bookingRef": "4S24ZM",
+        "departure": null,
+        "arrival": null,
+        "status": "missing",
+        "missing": "Brottfararstund og komutími",
+        "notes": "Take CDGVAL shuttle to Terminal 2"
+      },
+      {
+        "id": "tr-7fq3ax",
+        "label": "Lest 7FQ3AX — Avignon → París",
+        "date": "2026-04-04",
+        "from": "Avignon",
+        "to": "París",
+        "passengers": "Atli, Agnes, Ólöf G. & Magnús",
+        "bookingRef": "7FQ3AX",
+        "departure": null,
+        "arrival": null,
+        "status": "unconfirmed",
+        "missing": "Tímar á miða — óþekktir"
+      },
+      {
+        "id": "tr-kalli-apr4",
+        "label": "Lest — Avignon → París Gare de Lyon",
+        "date": "2026-04-04",
+        "from": "Avignon",
+        "to": "París Gare de Lyon",
+        "passengers": "Kalli, Védís, Áróra & Hallbjörn Helgi",
+        "bookingRef": null,
+        "departure": "12:41",
+        "arrival": "15:23",
+        "status": "confirmed"
+      }
+    ],
+    "cars": [
+      {
+        "id": "car-alamo",
+        "label": "Alamo — Volvo XC60",
+        "dateFrom": "2026-03-26",
+        "pickupLocation": "Avignon TGV stöð (ekki miðbær — sparar ~€200)",
+        "company": "Alamo",
+        "vehicle": "Volvo XC60",
+        "drivers": "Hallbjörn & Þorbjörg",
+        "status": "confirmed"
+      },
+      {
+        "id": "car-electric",
+        "label": "Rafbíll — Kalli & Védís",
+        "dateFrom": "2026-03-27",
+        "company": null,
+        "vehicle": null,
+        "drivers": "Kalli & Védís",
+        "status": "unconfirmed",
+        "missing": "Leigufyrirtæki, bókunarnúmer, tegund bíls",
+        "notes": "Charging socket confirmed at Mas des Joubarbes"
+      }
+    ]
+  },
+
+  "schedule": [
+    {
+      "date": "2026-03-26",
+      "dayOfWeek": { "is": "Fimmtudagur", "en": "Thursday" },
+      "title": { "is": "Ferðadagur", "en": "Travel Day" },
+      "subtitle": { "is": "Hallbjörn & Þorbjörg fljúga til Parísar, lest til Avignon", "en": "Hallbjörn & Þorbjörg fly to Paris, train to Avignon" },
+      "location": "Paris → Avignon → St. Rémy",
+      "blocks": [
+        {
+          "icon": "🚆",
+          "time": null,
+          "title": { "is": "Lest CDG → Avignon TGV", "en": "Train CDG → Avignon TGV" },
+          "detail": { "is": "Bókunarnúmer 4S24ZM. Taka CDGVAL-skutlu að flugstöð 2.", "en": "Booking ref 4S24ZM. Take CDGVAL shuttle to Terminal 2." },
+          "status": "confirmed"
+        },
+        {
+          "icon": "🚗",
+          "time": null,
+          "title": { "is": "Sækja Alamo bíl á Avignon TGV", "en": "Pick up Alamo car at Avignon TGV" },
+          "detail": { "is": "Volvo XC60. Sækja á stöðinni, ekki í miðbænum.", "en": "Volvo XC60. Station pick-up, not city centre." },
+          "status": "confirmed"
+        },
+        {
+          "icon": "🏨",
+          "time": { "is": "frá kl. 15:00", "en": "from 3:00 PM" },
+          "title": { "is": "Innritun á La Maison du Village", "en": "Check in at La Maison du Village" },
+          "detail": { "is": "Suite Ivoire Prestige. Morgunmatur innifalinn.", "en": "Suite Ivoire Prestige. Breakfast included." },
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-27",
+      "dayOfWeek": { "is": "Föstudagur", "en": "Friday" },
+      "title": { "is": "Kalli & fjölskylda koma", "en": "Kalli & family arrive" },
+      "subtitle": { "is": "Koma á Mas des Joubarbes dag fyrr", "en": "Arrive at Mas des Joubarbes a day early" },
+      "location": "Saint-Rémy-de-Provence",
+      "blocks": [
+        {
+          "icon": "🏠",
+          "time": null,
+          "title": { "is": "Kalli, Védís, Áróra og Hallbjörn Helgi flytja inn á húsið", "en": "Kalli, Védís, Áróra & Hallbjörn Helgi move into the house" },
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-28",
+      "dayOfWeek": { "is": "Laugardagur", "en": "Saturday" },
+      "title": { "is": "Komudagur", "en": "Arrival Day" },
+      "subtitle": { "is": "Allir flytja inn á Mas des Joubarbes", "en": "Everyone moves into Mas des Joubarbes" },
+      "location": "Saint-Rémy-de-Provence",
+      "blocks": [
+        {
+          "icon": "✈️",
+          "time": { "is": "Morgunn · kl. 10–14", "en": "Morning · 10 AM – 2 PM" },
+          "title": { "is": "Koma og innflutningur", "en": "Arrivals & settling in" },
+          "detail": { "is": "Aðalhópurinn flýgur frá Reykjavík í gegnum París, svo lest — París CDG → Avignon TGV — niður til St. Rémy.", "en": "Main group flies from Reykjavík via Paris, then train — Paris CDG → Avignon TGV — down to St. Rémy." },
+          "type": "planned"
+        },
+        {
+          "icon": "🌿",
+          "time": { "is": "Síðdegi · kl. 14–19", "en": "Afternoon · 2 – 7 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Fyrsta kynning á húsinu og lóðinni. Skoðaðu þorpið í þínum eigin hraða.", "en": "First feel for the house and grounds. Explore the village at your own pace." },
+          "type": "free"
+        },
+        {
+          "icon": "🥂",
+          "time": { "is": "Kvöld · kl. 19:30–22", "en": "Evening · 7:30 PM – 10 PM" },
+          "title": { "is": "Velkominn kvöldverður á húsinu", "en": "Welcome dinner at the house" },
+          "detail": { "is": "Óformlegur fyrsti kvöldverður saman — eldaðu saman eða keypt af staðbundnum mörkuðum.", "en": "Casual first dinner together — cook as a group or pick up from local markets." },
+          "type": "planned"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-29",
+      "dayOfWeek": { "is": "Sunnudagur", "en": "Sunday" },
+      "title": { "is": "Alpillesfjöllin", "en": "The Alpilles" },
+      "subtitle": { "is": "Fyrsti heildardagur í Provence", "en": "First full day in Provence" },
+      "location": "Saint-Rémy / Les Baux-de-Provence",
+      "blocks": [
+        {
+          "icon": "☕",
+          "time": { "is": "Morgunn · kl. 9–12", "en": "Morning · 9 AM – 12 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Kaffi í bænum, ganga um sunnudagsgöturnar, sof lengi.", "en": "Coffee in town, wander the Sunday streets, sleep in." },
+          "type": "free"
+        },
+        {
+          "icon": "🏔️",
+          "time": { "is": "Síðdegi · kl. 13:30–18:30", "en": "Afternoon · 1:30 – 6:30 PM" },
+          "title": { "is": "Les Baux-de-Provence og Carrières de Lumières", "en": "Les Baux-de-Provence & Carrières de Lumières" },
+          "detail": { "is": "Dramatíska klettaþorpið Les Baux er 20 mín í burtu. Carrières de Lumières — risastórar stafrænar listaverkbirtingar inni í kalkklubbanum.", "en": "The dramatic hilltop village of Les Baux is 20 min away. Carrières de Lumières — giant digital art projections inside a limestone quarry." },
+          "type": "planned",
+          "link": "https://www.carrieres-lumieres.com/en"
+        },
+        {
+          "icon": "🍽️",
+          "time": { "is": "Kvöld · kl. 19:30", "en": "Evening · 7:30 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Kvöldverður í St. Rémy eða á húsinu.", "en": "Dinner in St. Rémy or at the house." },
+          "type": "free"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-30",
+      "dayOfWeek": { "is": "Mánudagur", "en": "Monday" },
+      "title": { "is": "Óformlegt afmæliskvöld", "en": "Informal Birthday Evening" },
+      "subtitle": { "is": "Kvöldverður saman í bænum", "en": "Casual dinner out in town" },
+      "location": "Saint-Rémy-de-Provence",
+      "blocks": [
+        {
+          "icon": "🌞",
+          "time": { "is": "Morgunn · kl. 9–12", "en": "Morning · 9 AM – 12 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Rólægur morgunn. Farðu í St. Rémy, fáðu þér kaffi, skoðaðu búðirnar.", "en": "Slow morning. Wander into St. Rémy, grab a coffee, browse the shops." },
+          "type": "free"
+        },
+        {
+          "icon": "🎾",
+          "time": { "is": "Síðdegi · kl. 14–16", "en": "Afternoon · 2 – 4 PM" },
+          "title": { "is": "Tennistímar", "en": "Tennis Lessons" },
+          "detail": { "is": "Kevin, Tennis Club St Rémy. +33 7 70 32 96 34. €65/klst.", "en": "Kevin, Tennis Club St Rémy. +33 7 70 32 96 34. €65/hr." },
+          "type": "tentative",
+          "status": "unconfirmed — needs booking"
+        },
+        {
+          "icon": "🎂",
+          "time": { "is": "Kvöld · kl. 19:30", "en": "Evening · 7:30 PM" },
+          "title": { "is": "Afmæliskvöld — út í bænum", "en": "Birthday evening — out in town" },
+          "detail": { "is": "Hópurinn fagnast afmælinu með kvöldverð í St. Rémy eða heima. Hátíðlegi afmæliskvöldverðurinn með Yvan er á miðvikudaginn 1. apríl.", "en": "The group marks the birthday with dinner in St. Rémy or at the house. The formal birthday dinner with Yvan is on Wednesday April 1." },
+          "type": "planned"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "dayOfWeek": { "is": "Þriðjudagur", "en": "Tuesday" },
+      "title": { "is": "Dagferð til Avignon", "en": "Day Trip to Avignon" },
+      "subtitle": { "is": "Páfahöllin og frægi brúinn", "en": "Palais des Papes & the famous bridge" },
+      "location": "Avignon",
+      "blocks": [
+        {
+          "icon": "🌿",
+          "time": { "is": "Morgunn · kl. 9–12", "en": "Morning · 9 AM – 12 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Lazur morgunn á húsinu eða í þorpinu.", "en": "Lazy morning at the house or in the village." },
+          "type": "free",
+          "highlight": {
+            "icon": "✈️",
+            "text": { "is": "Hjalti og Vera að koma — flug DL8740 lendir á CDG kl. 5:55, svo lest og akstur niður.", "en": "Hjalti & Vera arriving — flight DL8740 lands CDG 5:55 AM, then train + drive down." }
+          }
+        },
+        {
+          "icon": "⚜️",
+          "time": { "is": "Síðdegi · kl. 13–18:30", "en": "Afternoon · 1 – 6:30 PM" },
+          "title": { "is": "Avignon — Páfahöllin", "en": "Avignon — Palais des Papes" },
+          "detail": { "is": "Eitt af stærstu gotnesku mannvirkjum í Evrópu. Frægi brúinn, gamla bærinn, frábær kaffihús. Um 45 mín akstur.", "en": "One of the largest Gothic buildings in Europe. The famous bridge, the old town, great cafés. About 45 min drive." },
+          "type": "planned",
+          "link": "https://palais-des-papes.com/"
+        },
+        {
+          "icon": "🍽️",
+          "time": { "is": "Kvöld · kl. 19:30", "en": "Evening · 7:30 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Kvöldverður í Avignon á leið heim, eða aftur á húsið.", "en": "Dinner in Avignon before heading back, or back to the house." },
+          "type": "free"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "dayOfWeek": { "is": "Miðvikudagur", "en": "Wednesday" },
+      "title": { "is": "Markaður & Afmæliskvöldverður 🎂", "en": "Market Day & Birthday Dinner 🎂" },
+      "subtitle": { "is": "Markaður að morgni · hátíðlegur kvöldverður með Yvan", "en": "Market morning · formal birthday dinner with Yvan" },
+      "location": "Saint-Rémy-de-Provence",
+      "blocks": [
+        {
+          "icon": "🧺",
+          "time": { "is": "Morgunn · kl. 8–12:30", "en": "Morning · 8 AM – 12:30 PM" },
+          "title": { "is": "Miðvikudagsmarkaður í St. Rémy", "en": "St. Rémy Wednesday market" },
+          "detail": { "is": "Frægi vikumarkaðurinn fyllir miðbæ bæjarins — staðbundin framleiðsla, Provence-vörur, lavender, ólífur, ostur, vín.", "en": "The famous weekly market fills the town centre — local produce, Provençal goods, lavender, olives, cheese, wine." },
+          "type": "planned"
+        },
+        {
+          "icon": "🎂",
+          "time": { "is": "Kvöld · kl. 19:30 – miðnætti", "en": "Evening · 7:30 PM – midnight" },
+          "title": { "is": "Afmæliskvöldverður — sérkokkurinn Yvan Gilardi", "en": "Birthday dinner — Private chef Yvan Gilardi" },
+          "detail": { "is": "Hátíðlegur afmæliskvöldverður með einkakokkinum. Ceviche, filet de boeuf og ávaxtar-dessert.", "en": "The formal birthday dinner with private chef. Ceviche, filet de boeuf, and a fruit dessert." },
+          "type": "confirmed",
+          "tag": "birthday"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "dayOfWeek": { "is": "Fimmtudagur", "en": "Thursday" },
+      "title": { "is": "L'Isle-sur-la-Sorgue 🎨", "en": "L'Isle-sur-la-Sorgue 🎨" },
+      "subtitle": { "is": "Fornfærismarkaður og skurðir · matargerðarnámskeið um kvöldið", "en": "Antiques & canals · cooking class tonight" },
+      "location": "L'Isle-sur-la-Sorgue",
+      "blocks": [
+        {
+          "icon": "🥾",
+          "time": { "is": "Morgunn · kl. 9–12", "en": "Morning · 9 AM – 12 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Ganga í Alpilles, heimsækja Domaine de la Vallongue víngarðinn, eða njóttu hússins.", "en": "Hike the Alpilles, visit Domaine de la Vallongue vineyard, or simply enjoy the house." },
+          "type": "free"
+        },
+        {
+          "icon": "🏛️",
+          "time": { "is": "Síðdegi · kl. 13:30–19", "en": "Afternoon · 1:30 – 7 PM" },
+          "title": "L'Isle-sur-la-Sorgue",
+          "detail": { "is": "Alþjóðlega fornfæris- og hönnunarmessan fer fram 2.–5. apríl. Um 40 mín akstur.", "en": "The International Antiques & Design Fair runs April 2–5. About 40 min drive." },
+          "type": "planned"
+        },
+        {
+          "icon": "👨‍🍳",
+          "time": { "is": "Kvöld · kl. 19:00–22:00", "en": "Evening · 7 – 10 PM" },
+          "title": { "is": "Matargerðarnámskeið með kokkinum Yvan", "en": "Cooking class with Chef Yvan" },
+          "detail": { "is": "Franskt matargerðarnámskeið á húsinu — Provence-kökur, quiches og klassísk rétti.", "en": "French cooking class at the house — Provençal pies, quiches, and classic dishes." },
+          "type": "confirmed"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "dayOfWeek": { "is": "Föstudagur", "en": "Friday" },
+      "title": { "is": "Markaðir og páskahátíð 🎉", "en": "Markets & Easter Feria 🎉" },
+      "subtitle": { "is": "Eygalières að morgni · Arles um kvöldið", "en": "Eygalières morning · Arles tonight" },
+      "location": "Eygalières / Arles",
+      "blocks": [
+        {
+          "icon": "🧺",
+          "time": { "is": "Morgunn · kl. 8–11", "en": "Morning · 8 – 11 AM" },
+          "title": { "is": "Föstudagsmarkaður í Eygalières", "en": "Eygalières Friday market" },
+          "detail": { "is": "Lítið, heillandi þorp 10 mín í burtu. Frábær staðbundinn markaður.", "en": "Tiny, charming village 10 min away. Great local market." },
+          "type": "planned"
+        },
+        {
+          "icon": "🌿",
+          "time": { "is": "Hádegi og síðdegi · kl. 12–19", "en": "Midday & afternoon · 12 – 7 PM" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Slaktu á húsinu, borðaðu hádegismat. Góður tími til að pakka — útritun kl. 11 á laugardaginn.", "en": "Relax at the house. Good time to pack — check-out at 11 AM on Saturday." },
+          "type": "free"
+        },
+        {
+          "icon": "🎉",
+          "time": { "is": "Kvöld · kl. 20 – seint", "en": "Evening · 8 PM – late" },
+          "title": { "is": "Páskahátíðin í Arles", "en": "Arles Easter Feria" },
+          "detail": { "is": "Páskahátíðin opnar í Arles — bodegur, lifandi tónlist og götuhópar um alla borgina. Um 35 mín akstur.", "en": "The Easter Feria opens in Arles — bodegas, live music, and street parties. About 35 min drive." },
+          "type": "planned"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-04",
+      "dayOfWeek": { "is": "Laugardagur", "en": "Saturday" },
+      "title": { "is": "Síðasti morgunn á húsinu", "en": "Last Morning at the House" },
+      "subtitle": { "is": "Brottflutningur frá Mas des Joubarbes", "en": "Check-out from Mas des Joubarbes" },
+      "location": "Saint-Rémy → Avignon → París",
+      "blocks": [
+        {
+          "icon": "☕",
+          "time": { "is": "Morgunn · kl. 9–11", "en": "Morning · 9 – 11 AM" },
+          "title": { "is": "Síðasti morgunmatur saman", "en": "Final breakfast together" },
+          "type": "planned"
+        },
+        {
+          "icon": "🧳",
+          "time": { "is": "Síðdegi · kl. 11 og áfram", "en": "Afternoon · 11 AM onwards" },
+          "title": { "is": "Hóparnir fara sinn veginn", "en": "Groups head their own way" },
+          "detail": { "is": "Brottflutningur og aðskilnaður.", "en": "Check-out and disperse." },
+          "type": "planned",
+          "departures": [
+            {
+              "icon": "🚆",
+              "who": "Kalli, Védís, Áróra & Hallbjörn Helgi",
+              "detail": { "is": "Lest frá Avignon kl. 12:41 → Gare de Lyon kl. 15:23", "en": "Train from Avignon 12:41 PM → Gare de Lyon 3:23 PM" }
+            },
+            {
+              "icon": "🚆",
+              "who": "Atli, Agnes, Ólöf G. & Magnús",
+              "detail": { "is": "Lest frá Avignon til París · Bókunarnúmer 7FQ3AX", "en": "Train from Avignon to Paris · Booking ref 7FQ3AX" }
+            },
+            {
+              "icon": "🏨",
+              "who": "Atli & Agnes, Ólöf G. & Magnús",
+              "detail": { "is": "Fontaines du Luxembourg, París · 4.–7. apríl", "en": "Fontaines du Luxembourg, Paris · April 4–7" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-05",
+      "dayOfWeek": { "is": "Sunnudagur", "en": "Sunday" },
+      "title": { "is": "Páskasunnudagur 🐣", "en": "Easter Sunday 🐣" },
+      "subtitle": { "is": "París eða hvert sem vegurinn liggur", "en": "Paris or wherever the road takes you" },
+      "location": "París / annars staðar",
+      "blocks": [
+        {
+          "icon": "🏙️",
+          "time": { "is": "Allan daginn", "en": "All day" },
+          "title": { "is": "Frjálst — á eigin vegum", "en": "Free — on your own" },
+          "detail": { "is": "Hluti hópsins í París. Hjalti & Vera verða eftir til 8. apríl.", "en": "Some of the group in Paris. Hjalti & Vera staying on until April 8." },
+          "type": "free"
+        }
+      ]
+    }
+  ],
+
+  "activities": [
+    {
+      "id": "act-yvan-dinner",
+      "name": { "is": "Afmæliskvöldverður — Yvan Gilardi", "en": "Birthday Dinner — Yvan Gilardi" },
+      "date": "2026-04-01",
+      "time": "19:30 – midnight",
+      "location": "Mas des Joubarbes",
+      "status": "confirmed",
+      "contact": {
+        "name": "Yvan Gilardi",
+        "email": "toquadom@gmail.com",
+        "phone": "+33 6 13 19 81 65"
+      },
+      "menu": "Ceviche, filet de boeuf, fruit dessert"
+    },
+    {
+      "id": "act-cooking",
+      "name": { "is": "Matargerðarnámskeið — Yvan", "en": "Cooking Class — Chef Yvan" },
+      "date": "2026-04-02",
+      "time": "19:00 – 22:00",
+      "location": "Mas des Joubarbes",
+      "status": "confirmed",
+      "contact": {
+        "name": "Yvan Gilardi",
+        "email": "toquadom@gmail.com",
+        "phone": "+33 6 13 19 81 65"
+      },
+      "description": { "is": "Provence-kökur, quiches og klassísk rétti", "en": "Provençal pies, quiches, and classic dishes" }
+    },
+    {
+      "id": "act-tennis",
+      "name": { "is": "Tennistímar", "en": "Tennis Lessons" },
+      "date": "2026-03-30",
+      "time": "14:00 – 16:00 (tentative)",
+      "location": "Tennis Club St Rémy (or at the house court)",
+      "status": "unconfirmed",
+      "contact": {
+        "name": "Kevin",
+        "phone": "+33 7 70 32 96 34"
+      },
+      "rate": "€65/hour",
+      "notes": "Rackets and balls available at the house"
+    },
+    {
+      "id": "act-bikes",
+      "name": { "is": "Hjólaferð", "en": "Bike Ride" },
+      "date": null,
+      "status": "unconfirmed",
+      "options": [
+        {
+          "name": "Terroir à Vélo",
+          "type": "E-bike half-day trip",
+          "contact": { "name": "Pierre", "phone": "+33 6 19 70 07 19", "method": "WhatsApp" },
+          "url": "https://www.terroir-a-velo.com/velo-electrique-demi-journee-provence"
+        },
+        {
+          "name": "Vélo-Passion",
+          "type": "Regular bike rental in St. Rémy",
+          "url": "https://www.velo-passion.net/"
+        }
+      ]
+    }
+  ],
+
+  "practical": {
+    "restaurants": [
+      { "name": "Honoré", "type": "Breakfast / brunch", "url": "https://www.honorebrunch.fr/" },
+      { "name": "Edu", "type": "Restaurant", "url": "https://www.edu-restaurant.com/" },
+      { "name": "Tête d'Ail", "type": "Provençal cuisine, nice terrace", "url": "https://tetesdail-saintremy.fr/" },
+      { "name": "Le Château des Alpilles", "type": "Hotel restaurant", "url": "https://www.chateaudesalpilles.com/fr/restaurants-bar-saint-remy-de-provence#maitre-piscine-1" },
+      { "name": "Les Pieds dans l'Eau", "type": "Drinks", "url": "https://g.co/kgs/DczxtVg" },
+      { "name": "Da Peppe", "type": "Pizzeria / Italian (takeaway available)", "url": "https://www.dapeppe.fr/#restaurant" },
+      { "name": "Kaly Sushi", "type": "Sushi — home delivery", "url": "https://www.kalysushi.com/commande-en-ligne/" },
+      { "name": "Chez Paulette", "type": "Restaurant in Eygalières", "url": "https://www.pauletteeygalieres.com/le-restaurant" },
+      { "name": "Maison Bernard", "type": "Restaurant in Maillane", "url": "https://www.maison-bernard.fr/" },
+      { "name": "L'Auberge de St Rémy", "type": "Michelin 2*", "url": null },
+      { "name": "L'Oustau de Baumanière", "type": "Michelin 3*", "url": null },
+      { "name": "Maison Hache", "type": "Michelin 1*", "url": null }
+    ],
+    "grocery": [
+      { "name": "Intermarché", "type": "Supermarket (good quality meat, cheese, fish, vegetables)", "location": "Saint-Rémy-de-Provence", "url": "https://g.co/kgs/BpVj2By" },
+      { "name": "Alpilles Bio", "type": "Organic grocery", "url": "https://g.co/kgs/scpZo9Y" },
+      { "name": "Terre et Blé", "type": "Organic bakery", "url": "https://terreetble.com/" },
+      { "name": "Maison Spiteri", "type": "Best baguette and cakes", "url": "https://share.google/y3otObmulfCtsgK8i" },
+      { "name": "Milligramme", "type": "Best cheese / fromagerie", "url": "https://www.milligramme-fromagerie-traiteur.fr/" }
+    ],
+    "placesToSee": [
+      { "name": "Les Baux-de-Provence", "detail": "Dramatic hilltop village, 20 min from house" },
+      { "name": "Carrières de Lumières", "detail": "Giant digital art projections in limestone quarry", "url": "https://www.carrieres-lumieres.com/en" },
+      { "name": "Eygalières", "detail": "Charming village, Friday morning market" },
+      { "name": "Saint Paul de Mausole", "detail": "Where Van Gogh lived, Roman site" },
+      { "name": "Palais des Papes, Avignon", "detail": "Pope's palace", "url": "https://palais-des-papes.com/" },
+      { "name": "Luberon villages", "detail": "Gordes, Bonnieux, ochre cliffs of Roussillon" },
+      { "name": "L'Isle-sur-la-Sorgue", "detail": "Flea market town; International Antiques Fair Apr 2–5" },
+      { "name": "Arles", "detail": "Roman arena and theatre; Easter Feria opens Apr 3" },
+      { "name": "Camargue / Saintes-Maries-de-la-Mer", "detail": "Sea day option" },
+      { "name": "Cassis", "detail": "Coastal town near Marseille — sea day option" },
+      { "name": "Aix-en-Provence", "detail": "Beautiful city, museums, shopping — 1 hr drive" },
+      { "name": "Domaine de la Vallongue", "detail": "Vineyard to visit", "url": "https://g.co/kgs/fQjaLJP" }
+    ],
+    "golf": [
+      { "name": "Domaine de Manville" },
+      { "name": "Golf de Servane" }
+    ],
+    "markets": [
+      { "day": "Wednesday", "location": "Saint-Rémy-de-Provence", "time": "Morning" },
+      { "day": "Friday", "location": "Eygalières", "time": "Morning" }
+    ]
+  },
+
+  "contacts": [
+    {
+      "name": "Anne Marin",
+      "role": "Property manager (Lou Mas Provence)",
+      "email": "anne@loumas-provence.com",
+      "phone": "+33 6 04 52 24 38",
+      "company": "SARL Mas Amor",
+      "address": "1799, Ch Servières des Cadenières, 13210 Saint-Rémy-de-Provence",
+      "web": "https://www.loumas-provence.com"
+    },
+    {
+      "name": "Yvan Gilardi",
+      "role": "Private chef (birthday dinner + cooking class)",
+      "email": "toquadom@gmail.com",
+      "phone": "+33 6 13 19 81 65"
+    },
+    {
+      "name": "Kevin",
+      "role": "Tennis coach (Tennis Club St Rémy)",
+      "phone": "+33 7 70 32 96 34",
+      "rate": "€65/hour"
+    },
+    {
+      "name": "Pierre",
+      "role": "Bike tours (Terroir à Vélo)",
+      "phone": "+33 6 19 70 07 19",
+      "method": "WhatsApp",
+      "web": "https://www.terroir-a-velo.com"
+    }
+  ],
+
+  "missing": [
+    { "item": "Main group outbound flight (Mar 28)", "what": "Flight number, airline, departure/arrival times" },
+    { "item": "Main group return flight (Apr 7)", "what": "Flight number, airline, departure/arrival times" },
+    { "item": "Train 4S24ZM (Mar 26)", "what": "Departure and arrival times" },
+    { "item": "Train 7FQ3AX (Apr 4)", "what": "Departure and arrival times" },
+    { "item": "Kalli's electric car", "what": "Rental company, booking ref, vehicle type" },
+    { "item": "Tennis booking", "what": "Confirm date/time with Kevin" },
+    { "item": "Bike booking", "what": "Confirm day, group size with Pierre" },
+    { "item": "Baby equipment", "what": "Confirm with Anne: high chair, baby bed, or both" },
+    { "item": "Hallbjörn & Þorbjörg outbound flight", "what": "Flight to Paris Mar 26 — details unknown" },
+    { "item": "Missing personal details", "what": "Védís (DOB, kennitala, phone), Áróra (all), Hallbjörn Helgi (all), Hjalti (DOB, kennitala, phone), Vera (all)" }
+  ]
+}

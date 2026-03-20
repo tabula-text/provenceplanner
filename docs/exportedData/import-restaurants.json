@@ -1,0 +1,14 @@
+[
+  { "name": "Honoré", "cuisine": "Breakfast / brunch", "url": "https://www.honorebrunch.fr/", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Edu", "cuisine": "Restaurant", "url": "https://www.edu-restaurant.com/", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Tête d'Ail", "cuisine": "Provençal cuisine, nice terrace", "url": "https://tetesdail-saintremy.fr/", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Le Château des Alpilles", "cuisine": "Hotel restaurant", "url": "https://www.chateaudesalpilles.com/fr/restaurants-bar-saint-remy-de-provence#maitre-piscine-1", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Les Pieds dans l'Eau", "cuisine": "Drinks", "url": "https://g.co/kgs/DczxtVg", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Da Peppe", "cuisine": "Pizzeria / Italian (takeaway available)", "url": "https://www.dapeppe.fr/#restaurant", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Kaly Sushi", "cuisine": "Sushi — home delivery", "url": "https://www.kalysushi.com/commande-en-ligne/", "location": "Saint-Rémy-de-Provence" },
+  { "name": "Chez Paulette", "cuisine": "Restaurant", "url": "https://www.pauletteeygalieres.com/le-restaurant", "location": "Eygalières" },
+  { "name": "Maison Bernard", "cuisine": "Restaurant", "url": "https://www.maison-bernard.fr/", "location": "Maillane" },
+  { "name": "L'Auberge de St Rémy", "cuisine": "Michelin 2*", "url": null, "location": "Saint-Rémy-de-Provence" },
+  { "name": "L'Oustau de Baumanière", "cuisine": "Michelin 3*", "url": null, "location": "Les Baux-de-Provence" },
+  { "name": "Maison Hache", "cuisine": "Michelin 1*", "url": null, "location": "Saint-Rémy-de-Provence" }
+]
