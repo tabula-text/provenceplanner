@@ -28,4 +28,6 @@ export const NAV_ITEMS = [
   { label: "Restaurants", href: "/restaurants", icon: "🍴" },
   { label: "Places", href: "/places", icon: "🗺️" },
   { label: "Packing", href: "/packing", icon: "🧳" },
+  { label: "Events", href: "/events", icon: "📌" },
+  { label: "Import", href: "/import", icon: "📥" },
 ];
